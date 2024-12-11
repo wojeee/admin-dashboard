@@ -1,0 +1,43 @@
+
+// Breakpoints
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px
+);
+
+// Spacing
+$spacing-unit: 0.25rem;
+$spacing-scale: (
+  '0': 0,
+  '1': $spacing-unit,
+  '2': $spacing-unit * 2,
+  '3': $spacing-unit * 3,
+  '4': $spacing-unit * 4,
+  '5': $spacing-unit * 5,
+  '6': $spacing-unit * 6
+);
+
+// Z-index
+$z-layers: (
+  'modal': 50,
+  'dropdown': 40,
+  'header': 30,
+  'sidebar': 20,
+  'content': 10,
+  'base': 1
+);
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+$transition-slow: all 0.3s ease-in-out;
+$transition-fast: all 0.1s ease-in-out;
+
+$primary-color: #4F46E5;
+$secondary-color: #6B7280;
+$success-color: #10B981;
+$error-color: #EF4444;
+$background-color: #FFFFFF;
+$text-color: #111827;

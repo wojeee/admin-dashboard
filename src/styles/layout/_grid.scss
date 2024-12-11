@@ -1,0 +1,53 @@
+// abstracts/_functions.scss
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+  }
+  
+  @function rem($pixels) {
+    $rem: strip-unit($pixels) / 16;
+    @return #{$rem}rem;
+  }
+  
+  @function get-color($color, $variant: 'default') {
+    @return map-get(map-get($colors, $color), $variant);
+  }
+  
+  @function get-spacing($size) {
+    $spaces: (
+      'xs': 0.25rem,
+      'sm': 0.5rem,
+      'md': 1rem,
+      'lg': 1.5rem,
+      'xl': 2rem
+    );
+    @return map-get($spaces, $size);
+  }
+  
+  // layout/_grid.scss
+  .grid {
+    display: grid;
+    gap: 1rem;
+  
+    &--dashboard {
+      grid-template-columns: 1fr;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  
+    &--main {
+      grid-template-columns: 1fr;
+      
+      @media (min-width: 1024px) {
+        grid-template-columns: 250px 1fr;
+      }
+    }
+  }

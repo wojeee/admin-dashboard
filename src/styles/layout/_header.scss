@@ -1,0 +1,44 @@
+.header {
+  grid-area: header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--background-primary);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 40;
+  
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $spacing-unit * 6;
+    
+    @include breakpoint-down('sm') {
+      padding: 0 $spacing-unit * 4;
+    }
+  }
+  
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  &__nav {
+    display: none;
+    
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 1.5rem;
+    }
+  }
+  
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

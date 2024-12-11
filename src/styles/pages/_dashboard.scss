@@ -1,0 +1,33 @@
+.dashboard {
+  padding: var(--spacing-lg);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &__title {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__section {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    @include card-shadow;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+}

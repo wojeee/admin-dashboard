@@ -1,0 +1,27 @@
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+      @return $number / ($number * 0 + 1);
+    }
+    @return $number;
+  }
+  
+  @function rem($pixels) {
+    $rem: strip-unit($pixels) / 16;
+    @return #{$rem}rem;
+  }
+  
+  @function get-color($color, $variant: 'default') {
+    @return map-get(map-get($colors, $color), $variant);
+  }
+  
+  @function get-spacing($size) {
+    $spaces: (
+      'xs': 0.25rem,
+      'sm': 0.5rem,
+      'md': 1rem,
+      'lg': 1.5rem,
+      'xl': 2rem
+    );
+    @return map-get($spaces, $size);
+  }
+  

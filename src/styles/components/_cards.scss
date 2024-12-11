@@ -1,0 +1,47 @@
+// components/_cards.scss
+.stat-card {
+  background-color: var(--background-color);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  &__title {
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  &__icon {
+    color: var(--secondary-color);
+  }
+  
+  &__value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  &__trend {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.875rem;
+    font-weight: 500;
+    
+    &--positive {
+      color: var(--success-color);
+    }
+    
+    &--negative {
+      color: var(--error-color);
+    }
+  }
+}
